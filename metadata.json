@@ -1,0 +1,5 @@
+{
+  "name": "Traductor de Jerga Técnica Naval",
+  "description": "Una herramienta para ayudar a los cadetes navales a comprender manuales técnicos complejos traduciendo la jerga a un lenguaje claro y sencillo, proporcionando explicaciones de los términos y desglosando los procedimientos.",
+  "requestFramePermissions": []
+}
