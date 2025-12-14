@@ -93,7 +93,12 @@ export default async function handler(req, res) {
         },
       });
       
-      const jsonText = response.text.trim();
+      let jsonText = response.text.trim();
+      // Limpiar bloques de código markdown si el modelo los incluye por error
+      if (jsonText.startsWith('```')) {
+        jsonText = jsonText.replace(/^```(json)?\s*/, '').replace(/\s*```$/, '');
+      }
+
       return res.status(200).json(JSON.parse(jsonText));
     }
 
